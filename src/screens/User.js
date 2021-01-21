@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { FetchUsers } from '../redux/actions/FetchUsers';
@@ -77,10 +78,12 @@ const User = (props) => {
       			</Link>
 			</Breadcrumbs>
 			{
-				Users === undefined
+				Users.length === 0
 					?
 					<div className={classes.loading}>
-						<img alt='' src={SpinGif} />
+						<Typography gutterBottom variant="subtitle1" component="h5">
+							No data.
+						</Typography>
 					</div>
 					:
 					<Grid container className={classes.root} spacing={2}>
