@@ -63,7 +63,7 @@ const SearchField = (props) => {
 				<InputBase
 					className={classes.input}
 					placeholder="Search for a GitHub user"
-					inputProps={{ 'aria-label': 'search google maps' }}
+					inputProps={{ 'aria-label': 'Search for a GitHub user' }}
 					onChange={(e) => setuser(e.target.value)}
 					onKeyDown={onKeyDown}
 				/>
