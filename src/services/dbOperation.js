@@ -11,8 +11,7 @@ const setData = (data) => {
 
 const getData = () => {
 	// Get data from IndexedDB.
-	db.collection('users')
-		.orderBy('age')
+	db.collection('users')		
 		.get()
 		.then(users => {
 			return users;
