@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 
 import { useDispatch } from 'react-redux';
-import { SelectedUser } from '../redux/actions/SelectedUser';
+import { SelectedUser } from '../redux/actions/UserSearchAction';
 
 const useStyles = makeStyles({
   root: {

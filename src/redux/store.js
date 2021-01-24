@@ -1,12 +1,8 @@
 import { createStore, combineReducers } from 'redux';
-import ReducerSearch from './reducers/Search';
-import FetchUsers from './reducers/FetchUsers';
-import SelectedUser from './reducers/SelectedUser';
+import UserSearch from './reducers/UserSearch';
 
 const rootReducer = combineReducers({
-	Search: ReducerSearch,
-	Users: FetchUsers,
-	User: SelectedUser
+	User: UserSearch
 });
 
 const store = createStore(rootReducer);

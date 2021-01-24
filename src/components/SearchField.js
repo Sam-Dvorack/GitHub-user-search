@@ -9,7 +9,7 @@ import {
 import SearchIcon from '@material-ui/icons/Search';
 
 import { useDispatch } from 'react-redux';
-import { UpdateSearch } from '../redux/actions/Search';
+import { UpdateSearch } from '../redux/actions/UserSearchAction';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

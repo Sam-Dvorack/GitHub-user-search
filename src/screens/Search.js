@@ -2,11 +2,11 @@ import React from 'react';
 import SearchField from '../components/SearchField';
 import User from './User';
 
-const Search = () => {
+const Search = (props) => {
 	return (
 		<>
 			<SearchField />
-			<User />
+			<User {...props} />
 		</>
 	);
 };

@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { FetchUsers } from '../redux/actions/FetchUsers';
+import { FetchUsers } from '../redux/actions/UserSearchAction';
 
 import api from '../services/api';
 import dbOperations from '../services/dbOperation';
@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const User = (props) => {
-	const Search = useSelector(UserObject => UserObject.Search.search);
+	const Search = useSelector(UserObject => UserObject.User.search);
 	const classes = useStyles();
 	const dispatch = useDispatch();
-	const Users = useSelector(UserObject => UserObject.Users.users);
+	const Users = useSelector(UserObject => UserObject.User.users);
 
 	useEffect(() => {
 		if (Search === '') {
