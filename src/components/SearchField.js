@@ -15,8 +15,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		width: 400,
-		position: 'absolute', left: '50%', top: '40%',
-		transform: 'translate(-50%, -40%)',
+		margin: 70,
 		backgroundColor: '#eee'
 	},
 	input: {
@@ -44,8 +43,6 @@ const SearchField = (props) => {
 
 	const onSearchClick = () => {
 		dispatch(UpdateSearch(user));
-
-		props.history.push('/users');
 	};
 
 	const onKeyDown = (e) => {
@@ -56,9 +53,6 @@ const SearchField = (props) => {
 
 	return (
 		<>
-			<Typography gutterBottom variant="h3" component="h2" className={classes.title}>
-				GitHub Search
-			</Typography>
 			<Paper className={classes.root}>
 				<InputBase
 					className={classes.input}

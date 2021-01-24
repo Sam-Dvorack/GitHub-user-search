@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -11,7 +9,6 @@ import { FetchUsers } from '../redux/actions/FetchUsers';
 import api from '../services/api';
 import dbOperations from '../services/dbOperation';
 import DetailCard from '../components/DetailCard';
-import SpinGif from '../resources/loading.gif';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -54,7 +51,7 @@ const User = (props) => {
 			.catch(function (err) {
 				alert(err.message);
 			});
-	}, []);
+	}, [Search]);
 
 	const getDetail = () => {
 		return Users.map(user => {
@@ -72,11 +69,6 @@ const User = (props) => {
 
 	return (
 		<>
-			<Breadcrumbs className={classes.Breadcrumbs} aria-label="breadcrumb">
-				<Link color="inherit" href="/">
-					Home
-      			</Link>
-			</Breadcrumbs>
 			{
 				Users.length === 0
 					?
